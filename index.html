@@ -76,9 +76,26 @@
     #radovi h2 { grid-column: span 7 !important; font-size: 28px !important; }
     [data-arrows] { display: none !important; }
     #radovi h2 { grid-column: span 12 !important; }
-    [data-slide] { flex: 0 0 calc(100% - 24px) !important; aspect-ratio: 3 / 4 !important; }
+    [data-slide] { flex: 0 0 calc(100% - 32px) !important;
+                    width: calc(100% - 32px) !important;
+                    height: 380px !important; /* Definisana fiksna visina kartice za mobilni */
+                    scroll-snap-align: center !important;
+                    scroll-snap-stop: always !important;
+                    box-sizing: border-box;}
+    [data-slide] image-slot,
+  image-slot img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+}
     [data-dots] { display: flex !important; }
-    [data-track] { scroll-snap-type: x mandatory !important; }
+    [data-track] { display: flex !important;
+                  overflow-x: auto !important;
+                  scroll-snap-type: x mandatory !important;
+                  -webkit-overflow-scrolling: touch;
+                  scroll-behavior: smooth; }
     [data-igcta] { justify-content: flex-start !important; }
     [data-igline] { display: block; }
     [data-herotitle] { font-size: 58px !important; line-height: 0.9 !important; }
