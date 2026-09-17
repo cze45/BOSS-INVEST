@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #17140F; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 40px 20px; background: #17140F; font-family: Poppins, sans-serif; color: #fff">
+  <div style="text-align: center">
+    <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #ED3124">Mobilni prikaz</p>
+    <p style="margin: 8px 0 0; font-size: 14px; color: rgba(255,255,255,0.55)">Skrolujte unutar telefona · 390 × 844</p>
+  </div>
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="390px,844px">
+    <div style="width: 100%; height: 100%; padding-top: 54px; box-sizing: border-box; background: #0E0C0B"><iframe src="./Boss%20Invest%20Group.dc.html" title="Boss Invest Group mobilni prikaz" style="width: 100%; height: 100%; border: none; display: block; background: #0E0C0B"></iframe></div>
+  </x-import>
+</div>
+</x-dc>
+</body>
+</html>
